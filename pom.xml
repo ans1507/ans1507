@@ -17,6 +17,18 @@
   </dependencies>
   <build>
     <finalName>JenkinsWar</finalName>
+    <pluginManagement>
+    <plugins>
+      <plugin>
+          <executions>
+          <execution>
+            <!-- This id must match the -Prelease-profile id value or else sources will be "uploaded" twice, which causes Nexus to fail -->
+            <id>attach-sources</id>
+           </execution>
+           </executions>
+      </plugin>
+    </plugins>    
+  </pluginManagement>
   </build>
   <distributionManagement>
         <repository>
