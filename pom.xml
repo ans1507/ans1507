@@ -17,18 +17,25 @@
   </dependencies>
   <build>
     <finalName>JenkinsWar</finalName>
-    <pluginManagement>
-    <plugins>
-      <plugin>
-          <executions>
-          <execution>
-            <!-- This id must match the -Prelease-profile id value or else sources will be "uploaded" twice, which causes Nexus to fail -->
-            <id>attach-sources</id>
-           </execution>
-           </executions>
-      </plugin>
-    </plugins>    
-  </pluginManagement>
+    <plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+   <configuration>
+      <serverId>nexus</serverId>
+      <nexusUrl>http://18.223.241.233:8081/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
   </build>
   <distributionManagement>
         <repository>
