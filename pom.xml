@@ -18,11 +18,4 @@
   <build>
     <finalName>JenkinsWar</finalName>
   </build>
-  <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Snapshots</name>
-            <url>http://18.223.241.233:8081/repository/ANS_REPO/</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
