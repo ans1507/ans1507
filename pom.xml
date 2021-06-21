@@ -17,7 +17,9 @@
   </dependencies>
   <build>
     <finalName>JenkinsWar</finalName>
-    <plugin>
+  </build>
+  
+  <plugin>
    <groupId>org.sonatype.plugins</groupId>
    <artifactId>nexus-staging-maven-plugin</artifactId>
    <version>1.5.1</version>
@@ -31,12 +33,11 @@
       </execution>
    </executions>
    <configuration>
-      <serverId>nexus</serverId>
+      <serverId>Nexus</serverId>
       <nexusUrl>http://18.223.241.233:8081/</nexusUrl>
       <skipStaging>true</skipStaging>
    </configuration>
 </plugin>
-  </build>
   <distributionManagement>
         <repository>
             <id>my_repo</id>
